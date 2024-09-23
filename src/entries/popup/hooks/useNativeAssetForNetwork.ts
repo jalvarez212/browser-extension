@@ -15,7 +15,8 @@ export const getNetworkNativeAssetChainId = ({
   | ChainId.polygon
   | ChainId.avalanche
   | ChainId.degen
-  | ChainId.bsc => {
+  | ChainId.bsc
+  | ChainId.arbitrum => {
   switch (chainId) {
     case ChainId.avalanche:
       return ChainId.avalanche;
@@ -25,6 +26,8 @@ export const getNetworkNativeAssetChainId = ({
       return ChainId.polygon;
     case ChainId.degen:
       return ChainId.degen;
+    case ChainId.apechain:
+      return ChainId.arbitrum;
     case ChainId.arbitrum:
     case ChainId.mainnet:
     case ChainId.optimism:

@@ -117,6 +117,7 @@ function parseTokenSearch(assets: SearchAsset[], chainId: ChainId) {
           `${ETH_ADDRESS}_${ChainId.avalanche}`,
           `${ETH_ADDRESS}_${ChainId.blast}`,
           `${ETH_ADDRESS}_${ChainId.degen}`,
+          `${ETH_ADDRESS}_${ChainId.apechain}`,
         ].includes(`${a.uniqueId}_${chainId}`),
         mainnetAddress: a.uniqueId as Address,
         uniqueId: `${networkInfo?.address || a.uniqueId}_${chainId}`,
