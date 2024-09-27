@@ -102,12 +102,12 @@ export const useSwapReviewDetails = ({
 
   const exchangeRate = useMemo(() => {
     const convertedSellAmount = convertRawAmountToDecimalFormat(
-      quote.sellAmountDisplay.toString(),
+      quote?.sellAmountDisplay?.toString(),
       assetToSell.decimals,
     );
 
     const convertedBuyAmount = convertRawAmountToDecimalFormat(
-      quote.buyAmountDisplay.toString(),
+      quote?.buyAmountDisplay?.toString(),
       assetToBuy.decimals,
     );
 
@@ -134,8 +134,7 @@ export const useSwapReviewDetails = ({
     assetToBuy.symbol,
     assetToSell.decimals,
     assetToSell.symbol,
-    quote.buyAmountDisplay,
-    quote.sellAmountDisplay,
+    quote,
   ]);
 
   return {
